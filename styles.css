@@ -1,0 +1,85 @@
+body {
+  margin: 0; }
+
+.top-bar {
+  background: #333; }
+  @media screen and (min-width: 768px) {
+    .top-bar {
+      display: none; } }
+
+.icon-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding-left: 1em; }
+  .icon-menu__bar {
+    background: #fff;
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    position: relative; }
+    .icon-menu__bar:after, .icon-menu__bar:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 30px;
+      height: 4px;
+      border-radius: 2px;
+      background: #fff;
+      top: -.5em; }
+    .icon-menu__bar:after {
+      top: .5em; }
+
+.menu {
+  background: #333;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  list-style: none;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  -o-transition: transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s; }
+  @media screen and (min-width: 768px) {
+    .menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0); } }
+  .menu--show {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); }
+  .menu__item {
+    padding: 1em;
+    border-bottom: 1px solid #fff; }
+    @media screen and (min-width: 768px) {
+      .menu__item {
+        border-bottom: none;
+        text-transform: uppercase; }
+        .menu__item:hover {
+          background: grey; }
+          .menu__item:hover a {
+            color: #000; } }
+  .menu__link {
+    color: #fff;
+    text-decoration: none; }
